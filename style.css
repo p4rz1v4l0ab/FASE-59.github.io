@@ -1,0 +1,174 @@
+body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+
+
+        header {
+            background-color: #1e272e; /* Un tono oscuro y profesional */
+            color: #f8f8f8; /* Texto claro para contraste */
+            padding: 1.5rem 2rem; /* Espacio interior cómodo */
+            display: flex;
+            justify-content: space-between; /* Espacia los elementos internos */
+            align-items: center; /* Alinea verticalmente los elementos */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para elevación */
+            position: sticky; /* Fija el header en la parte superior al hacer scroll (opcional) */
+            top: 0; /* Requerido si position: sticky; */
+            z-index: 100; /* Asegura que esté por encima de otros elementos si es sticky */
+        }
+        
+        header h1,
+        header .logo { /* Si tienes un logo con esta clase */
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em; /* Ligero espaciado entre letras para un toque moderno */
+            margin: 0;
+            color: #ccc;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Para alinear los elementos horizontalmente */
+            align-items: center; /* Para centrar verticalmente si es necesario */
+        }
+        
+        header nav ul li {
+            margin-left: 1.5rem; /* Espacio entre los elementos de la lista */
+        }
+        
+        header nav ul li:first-child {
+            margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+        }
+        
+        header nav a {
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            color: #eee; /* Color del texto de los enlaces (gris claro para contraste) */
+            font-weight: 500; /* Peso de fuente ligeramente más grueso para mejor legibilidad */
+            transition: color 0.3s ease-in-out; /* Transición suave para el efecto hover */
+            padding: 0.5rem 0; /* Un poco de espacio vertical alrededor del texto del enlace */
+        }
+        
+        header nav a:hover {
+            color: #64b5f6; /* Color al pasar el ratón (un акцент profesional) */
+        }
+        
+        /* Opcional: Indicador sutil de la página activa */
+        header nav a.active {
+            color: #64b5f6;
+            border-bottom: 2px solid #64b5f6; /* Una línea sutil debajo del enlace activo */
+            padding-bottom: calc(0.5rem - 2px); /* Ajusta el padding inferior para que la altura total no cambie */
+        }
+        
+        header nav a:hover {
+            color: #64b5f6; /* Un color акцент para el hover (azul futurista) */
+        }
+        
+        /* Opcional: Línea de acento sutil */
+        header::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background: linear-gradient(90deg, #64b5f6 0%, rgba(30, 39, 46, 0) 100%); /* Degradado futurista */
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+
+.separator {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+/* Sección de título */
+.titulo-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Animación de aparición */
+}
+
+.titulo h1 {
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    color: #777;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pie de página */
+.footer-container {
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05); /* Sutil sombra superior */
+}
+
+.footer div {
+    color: #555;
+    animation: slideIn 1s ease-out 1s backwards; /* Animación de deslizamiento */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.just {
+    text-align: justify;
+  }
+
+  .text {
+    text-align: center;
+    backface-visibility: none;
+    color: #007bff;
+  }
+
+  .table {
+    background-color: #fff; /* Fondo blanco para el minimalismo */
+    border-radius: 8px; /* Bordes redondeados para suavizar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espacio interior */
+    margin: 20px; /* Margen alrededor del cuadro */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición suave para la sombra y la escala */
+    cursor: pointer; /* Indica que es interactivo */
+}
+
+.table:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el cursor */
+    transform: scale(1.02); /* Ligeramente más grande al pasar el cursor */
+}
+
+.table .just {
+    color: #333; /* Color de texto principal */
+    line-height: 1.6; /* Espaciado entre líneas para legibilidad */
+    text-align: justify; /* Justificar el texto dentro */
+    margin-bottom: 10px; /* Espacio inferior para otros elementos si los hubiera */
+}
